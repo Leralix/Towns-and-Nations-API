@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'signing'
+}
+
+group = 'org.tan'
+version = '0.13.5'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "spigot-repo"
+        url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.20.2-R0.1-SNAPSHOT'
+}
+
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+
+        }
+    }
+    repositories {
+        maven {
+            name = "local"
+            url = uri("$buildDir/repo") // Répertoire local pour tester
+        }
+    }
+
+}
