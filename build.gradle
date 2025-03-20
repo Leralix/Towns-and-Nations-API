@@ -3,7 +3,7 @@ plugins {
     id "com.vanniktech.maven.publish" version "0.31.0"
 }
 
-group = 'org.tan.api'
+group = 'org.leralix.tan-api'
 version = '0.1.0'
 
 import com.vanniktech.maven.publish.SonatypeHost
@@ -11,6 +11,11 @@ import com.vanniktech.maven.publish.SonatypeHost
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL, true)
     signAllPublications()
+}
+
+signing {
+    useGpgCmd()
+    sign(publishing.publications)
 }
 
 repositories {
@@ -29,7 +34,7 @@ dependencies {
 
 
 mavenPublishing {
-    coordinates("org.tan.api", "TownsAndNationsAPI", "0.1.0-SNAPSHOT")
+    coordinates("io.github.leralix", "tan-api", "0.1.0")
 
     pom {
         name = "Towns and Nations API"
