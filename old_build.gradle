@@ -1,0 +1,82 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'signing'
+}
+
+group = 'org.tan'
+version = '0.13.5-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    gradlePluginPortal()
+    maven {
+        name = "spigot-repo"
+        url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.20.2-R0.1-SNAPSHOT'
+}
+
+
+publishing {
+    publications {
+        mavenJava(org.gradle.api.publish.maven.MavenPublication) {
+            groupId = 'org.tan.api'
+            artifactId = 'tan-api'
+            version = '0.13.5'
+
+            from components.java
+
+            pom {
+                name = 'TanAPI'
+                description = 'API for Towns and Nations plugin'
+                url = 'https://github.com/Leralix/Towns-and-Nations'
+
+                licenses {
+                    license {
+                        name = 'GNU General Public License v3.0'
+                        url = 'https://www.gnu.org/licenses/gpl-3.0.html'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = '78090544'
+                        name = 'Leralix'
+                        email = 'leralix98@gmail.com'
+                    }
+                }
+
+                scm {
+                    connection = 'scm:git:git://github.com/Leralix/Towns-and-Nations.git'
+                    developerConnection = 'scm:git:ssh://github.com/Leralix/Towns-and-Nations.git'
+                    url = 'https://github.com/Leralix/Towns-and-Nations'
+                }
+            }
+
+        }
+    }
+    repositories {
+        maven {
+            name = 'local'
+            url = layout.buildDirectory.dir('repo')
+        }
+        maven {
+            name = "Maven-Central-Portal"
+            url = uri("https://central.sonatype.com")
+            credentials {
+                username = findProperty("mavenCentralUsername")
+                password = findProperty("mavenCentralPassword")
+            }
+        }
+
+    }
+
+}
+
+signing {
+    sign configurations.archives
+}
