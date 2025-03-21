@@ -5,6 +5,6 @@ import org.bukkit.block.Block;
 public interface TanAuthorisationAPI {
 
     boolean isBlockClaimed(Block block);
-    TanTerritoryAPI getTerritoryOfBlock(Block block);
+    TanTerritoryManager getTerritoryOfBlock(Block block);
 
 }

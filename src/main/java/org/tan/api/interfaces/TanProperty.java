@@ -1,5 +1,7 @@
 package org.tan.api.interfaces;
 
+import org.leralix.lib.position.Vector3D;
+
 public interface TanProperty {
 
     String getName();

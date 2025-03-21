@@ -1,16 +1,16 @@
 package org.tan.api.interfaces;
 
 import java.util.Collection;
+import java.util.UUID;
 
 public interface TanPlayer {
 
     String getNameStored();
     void setNameStored(String name);
-    String getUUID();
+    UUID getUUID();
 
     boolean hasTown();
     TanTown getTown();
-    void setTown(TanTown town);
 
     boolean hasRegion();
     TanRegion getRegion();
