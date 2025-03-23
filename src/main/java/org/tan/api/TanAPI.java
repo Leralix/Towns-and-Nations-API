@@ -2,6 +2,8 @@ package org.tan.api;
 
 
 import org.leralix.lib.data.PluginVersion;
+import org.tan.api.getters.TanClaimManager;
+import org.tan.api.getters.TanLandmarkManager;
 import org.tan.api.getters.TanPlayerManager;
 import org.tan.api.getters.TanTerritoryManager;
 
@@ -9,11 +11,16 @@ public abstract class TanAPI {
     private static TanAPI instance;
 
     protected TanAPI() {
-        if (instance != null) {
-            throw new IllegalStateException("TanAPI instance already exist !");
-        }
-        instance = this;
+
     }
+
+    public static void register(TanAPI api) {
+        if (instance != null) {
+            throw new IllegalStateException("TanAPI is already initialised !");
+        }
+        instance = api;
+    }
+
 
     public static TanAPI getInstance() {
         if (instance == null) {
@@ -22,8 +29,13 @@ public abstract class TanAPI {
         return instance;
     }
 
+
     public abstract TanPlayerManager getPlayerManager();
-    public abstract TanTerritoryManager getTownManager();
+    public abstract TanTerritoryManager getTerritoryManager();
+    public abstract TanClaimManager getClaimManager();
+    public abstract TanLandmarkManager getLandmarkManager();
+
+
     public abstract PluginVersion getPluginVersion();
     public abstract PluginVersion getMinimumSupportingMapPlugin();
 
