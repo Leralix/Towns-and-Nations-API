@@ -9,9 +9,9 @@ import java.util.UUID;
 public interface TanTerritory {
 
     /**
-     * @return the UUID of the territory
+     * @return the ID of the territory
      */
-    UUID getUUID();
+    String getID();
 
     /**
      * @return the name of the territory

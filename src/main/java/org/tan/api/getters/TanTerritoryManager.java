@@ -1,7 +1,6 @@
 package org.tan.api.getters;
 
 import org.tan.api.interfaces.TanRegion;
-import org.tan.api.interfaces.TanTerritory;
 import org.tan.api.interfaces.TanTown;
 
 import java.util.Collection;
@@ -11,11 +10,11 @@ import java.util.UUID;
 public interface TanTerritoryManager {
 
     /**
-     * Get a town by its UUID
-     * @param townUUID the UUID of the town
+     * Get a town by its ID
+     * @param townID the ID of the town
      * @return The town if it exists. {@link Optional#empty()} otherwise
      */
-    Optional<TanTown> getTown(UUID townUUID);
+    Optional<TanTown> getTown(String townID);
 
     /**
      * Get a town by its name
@@ -25,7 +24,7 @@ public interface TanTerritoryManager {
      * @param townName the name of the town
      * @return The town if it exists. {@link Optional#empty()} otherwise
      */
-    Optional<TanTown> getTown(String townName);
+    Optional<TanTown> getTownByName(String townName);
 
     /**
      * Get all the towns
@@ -34,11 +33,11 @@ public interface TanTerritoryManager {
     Collection<TanTown> getTowns();
 
     /**
-     * Get a region by its UUID
-     * @param regionUUID the UUID of the region
+     * Get a region by its ID
+     * @param regionID the ID of the region
      * @return The region if it exists. {@link Optional#empty()} otherwise
      */
-    Optional<TanRegion> getRegion(UUID regionUUID);
+    Optional<TanRegion> getRegion(String regionID);
 
     /**
      * Get a region by its name
@@ -48,7 +47,7 @@ public interface TanTerritoryManager {
      * @param regionName the name of the region
      * @return  The region if it exists. {@link Optional#empty()} otherwise
      */
-    Optional<TanRegion> getRegion(String regionName);
+    Optional<TanRegion> getRegionByName(String regionName);
 
     /**
      * Get all the regions

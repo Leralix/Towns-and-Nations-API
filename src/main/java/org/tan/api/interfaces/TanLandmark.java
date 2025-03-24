@@ -8,9 +8,9 @@ import java.util.UUID;
 public interface TanLandmark {
 
     /**
-     * @return The UUID of the landmark.
+     * @return The ID of the landmark.
      */
-    UUID getUUID();
+    String getID();
 
     /**
      * @return The name of the landmark.
