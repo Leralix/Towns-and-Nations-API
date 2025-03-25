@@ -73,6 +73,11 @@ public interface TanTerritory {
     int getNumberOfClaimedChunk();
 
     /**
+     * @return The number of claimed chunks of this territory
+     */
+    Collection<TanClaimedChunk> getClaimedChunks();
+
+    /**
      * @return the members of the territory
      */
     Collection<TanPlayer> getMembers();
@@ -92,10 +97,6 @@ public interface TanTerritory {
      */
     TanTerritory getOverlord();
 
-    /**
-     * @return The number of claimed chunks of this territory
-     */
-    Collection<TanClaimedChunk> getClaimedChunks();
 
 
 }

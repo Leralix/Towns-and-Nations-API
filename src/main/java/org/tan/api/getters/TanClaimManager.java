@@ -19,7 +19,7 @@ public interface TanClaimManager {
      * <br>
      * If the block is claimed by a landmark, the territory owning the landmark will be returned.
      * @param block The block to check.
-     * @return The territory owning the block, or empty if the block is not claimed.
+     * @return The territory owning the block, or {@link Optional#empty()} if the block is not claimed.
      */
     Optional<TanTerritory> getTerritoryOfBlock(Block block);
 

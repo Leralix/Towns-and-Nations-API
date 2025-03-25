@@ -4,6 +4,7 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.tan.api.interfaces.TanPlayer;
 
+import java.util.Collection;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -42,4 +43,9 @@ public interface TanPlayerManager {
      * @return the {@link TanPlayer} with the specified offline player.
      */
     TanPlayer get(OfflinePlayer offlinePlayer);
+
+    /**
+     * @return all players registered
+     */
+    Collection<TanPlayer> getAll();
 }
