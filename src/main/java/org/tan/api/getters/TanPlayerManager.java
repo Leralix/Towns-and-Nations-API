@@ -8,6 +8,11 @@ import java.util.Collection;
 import java.util.Optional;
 import java.util.UUID;
 
+/**
+ * The TanPlayerManager interface provides methods for accessing and managing player-related content within the application.
+ * It allows retrieval of players by their names, UUIDs or Player/OfflinePlayer objects and provides a collection of all registered players.
+ * This interface is essential for handling player-related operations and ensuring proper management of player data.
+ */
 public interface TanPlayerManager {
 
     /**

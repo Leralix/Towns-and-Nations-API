@@ -7,10 +7,17 @@ import org.tan.api.getters.TanLandmarkManager;
 import org.tan.api.getters.TanPlayerManager;
 import org.tan.api.getters.TanTerritoryManager;
 
+
+/**
+ * The main entry point to the TanAPI.
+ * <p>
+ * Use {@link #getInstance()} to access the instance.
+ */
+
 public abstract class TanAPI {
 
     /**
-     * The TanAPI singleton instance.
+     * The TanAPI instance
      */
     private static TanAPI instance;
 

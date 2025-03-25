@@ -5,6 +5,11 @@ import org.tan.api.interfaces.TanTerritory;
 
 import java.util.Optional;
 
+/**
+ * The TanClaimManager interface provides methods for managing block claims within the application.
+ * It allows checking if a block is claimed by a territory or landmark and retrieving the territory that owns a claimed block.
+ * This interface is essential for handling claim-related operations and ensuring proper management of block ownership.
+ */
 public interface TanClaimManager {
 
     /**

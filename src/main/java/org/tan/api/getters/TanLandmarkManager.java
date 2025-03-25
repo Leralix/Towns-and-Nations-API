@@ -7,6 +7,12 @@ import java.util.Collection;
 import java.util.Optional;
 import java.util.UUID;
 
+/**
+ * The TanLandmarkManager interface provides methods for accessing and managing landmarks within the application.
+ * It allows retrieval of landmarks by their names or UUIDs, and provides a collection of all landmarks.
+ * Additionally, it supports the creation of new landmarks using coordinates or locations.
+ * This interface is essential for handling landmark-related operations and ensuring proper management of landmark data.
+ */
 public interface TanLandmarkManager {
 
     /**

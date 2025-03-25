@@ -5,8 +5,12 @@ import org.tan.api.interfaces.TanTown;
 
 import java.util.Collection;
 import java.util.Optional;
-import java.util.UUID;
 
+/**
+ * The TanTerritoryManager interface provides methods for accessing and managing territories within the application.
+ * It allows retrieval of towns and regions by their IDs or names, and provides collections of all towns and regions.
+ * This interface is essential for handling territory-related operations and ensuring proper management of town and region data.
+ */
 public interface TanTerritoryManager {
 
     /**
