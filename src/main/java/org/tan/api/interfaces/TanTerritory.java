@@ -2,6 +2,7 @@ package org.tan.api.interfaces;
 
 import org.bukkit.Color;
 import org.bukkit.inventory.ItemStack;
+import org.tan.api.enums.ETownPermission;
 
 import java.util.Collection;
 import java.util.UUID;
@@ -97,6 +98,14 @@ public interface TanTerritory {
      */
     TanTerritory getOverlord();
 
+    /**
+     * Check if the player has the permission to do the action in the territory
+     * If the player is not a member of the territory, it will always return false.
+     * @param player        The player to check
+     * @param permission    The specific permission to check
+     * @return              True if the player has the permission, false otherwise
+     */
+    boolean canPlayerDoAction(TanPlayer player, ETownPermission permission);
 
 
 }

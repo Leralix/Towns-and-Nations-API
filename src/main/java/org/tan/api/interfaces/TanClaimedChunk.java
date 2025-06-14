@@ -1,5 +1,8 @@
 package org.tan.api.interfaces;
 
+import org.bukkit.Location;
+import org.tan.api.enums.EChunkPermission;
+
 import java.util.Optional;
 import java.util.UUID;
 
@@ -95,5 +98,14 @@ public interface TanClaimedChunk {
      * @return True if pvp can happen in the chunk, false otherwise
      */
     boolean canPvpHappen();
+
+    /**
+     * Check if the player can do the action in the chunk.
+     * <br>
+     * @param player        The player to check
+     * @param permission    The specific permission to check
+     * @return              True if the player has the permission, false otherwise
+     */
+    boolean canPlayerDoAction(TanPlayer player, EChunkPermission permission, Location location);
 
 }

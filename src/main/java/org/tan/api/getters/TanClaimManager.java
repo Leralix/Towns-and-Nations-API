@@ -1,6 +1,8 @@
 package org.tan.api.getters;
 
+import org.bukkit.Location;
 import org.bukkit.block.Block;
+import org.tan.api.interfaces.TanClaimedChunk;
 import org.tan.api.interfaces.TanTerritory;
 
 import java.util.Optional;
@@ -18,6 +20,13 @@ public interface TanClaimManager {
      * @return True if the block is claimed, false otherwise.
      */
     boolean isBlockClaimed(Block block);
+
+    TanClaimedChunk getClaimedChunk(Location location);
+
+
+    default TanClaimedChunk getClaimedChunk(Block block){
+        return getClaimedChunk(block.getLocation());
+    }
 
     /**
      * Get the territory own a block.

@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'org.leralix.tan-api'
-version = '0.2.1'
+version = '0.3.0'
 
 
 mavenPublishing {
@@ -40,7 +40,7 @@ javadoc {
 
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.20.2-R0.1-SNAPSHOT'
-    compileOnly 'io.github.leralix:sphere-lib:0.4.0'
+    compileOnly 'io.github.leralix:sphere-lib:0.4.6'
 }
 
 
