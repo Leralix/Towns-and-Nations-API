@@ -2,10 +2,7 @@ package org.tan.api;
 
 
 import org.leralix.lib.data.PluginVersion;
-import org.tan.api.getters.TanClaimManager;
-import org.tan.api.getters.TanLandmarkManager;
-import org.tan.api.getters.TanPlayerManager;
-import org.tan.api.getters.TanTerritoryManager;
+import org.tan.api.getters.*;
 
 
 /**
@@ -68,6 +65,11 @@ public abstract class TanAPI {
      * @return the landmark manager, responsible for landmark access
      */
     public abstract TanLandmarkManager getLandmarkManager();
+
+    /**
+     * @return the event manager, responsible to handle events
+     */
+    public abstract TanEventManager getEventManager();
 
     /**
      * @return Get the plugin version
