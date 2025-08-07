@@ -72,6 +72,11 @@ public abstract class TanAPI {
     public abstract TanEventManager getEventManager();
 
     /**
+     * @return the fort manager, responsible for fort access
+     */
+    public abstract TanFortManager getFortManager();
+
+    /**
      * @return Get the plugin version
      */
     public abstract PluginVersion getPluginVersion();
