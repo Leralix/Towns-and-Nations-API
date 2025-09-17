@@ -28,9 +28,6 @@ public abstract class TanAPI {
       * @param api the TanAPI instance
      */
     public static void register(TanAPI api) {
-        if (instance != null) {
-            throw new IllegalStateException("TanAPI is already initialised !");
-        }
         instance = api;
     }
 
