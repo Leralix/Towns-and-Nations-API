@@ -7,6 +7,11 @@ import java.util.Optional;
 public interface TanProperty {
 
     /**
+     * @return the ID of the property
+     */
+    String getID();
+
+    /**
      * @return the name of the property
      */
     String getName();
