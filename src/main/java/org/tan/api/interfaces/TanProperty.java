@@ -17,6 +17,11 @@ public interface TanProperty {
     String getName();
 
     /**
+     * @return the description of the property
+     */
+    String getDescription();
+
+    /**
      * @return the first corner of the property
      */
     Vector3D getFirstCorner();
