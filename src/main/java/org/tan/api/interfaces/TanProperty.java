@@ -34,7 +34,7 @@ public interface TanProperty {
     /**
      * @return the owner of the property
      */
-    TanPlayer getOwner();
+    TanOwner getOwner();
 
     /**
      * @return True if the property is for sale, false otherwise
